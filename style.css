@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif ;
+}
+
+body{
+    background-image: linear-gradient(90deg, purple, aqua, black);
+    background-size: 300% 300%;
+    min-height: 100vh;
+    animation: gradientflow 20s ease-in-out infinite;
+}
+
+@keyframes gradientflow{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    padding: 150px 150px;
+    border-radius: 50px;
+    border: 4px solid purple;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+img{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 4px solid purple;
+    border-radius: 50%;
+    top: -120px;
+    object-fit: cover;
+}
+
+.text{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 110px;
+}
+
+.text:hover{
+    cursor: default;
+}
+
+p{
+    color: purple;
+    font-weight: 500;
+}
+
+.social-media-links{
+    display: flex;
+    position: absolute;
+    font-size: 1.6em;
+    margin-top: 320px;
+    gap: 20px;
+}
+
+a{
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: color .2s ease-in-out;
+}
+
+a:hover{
+    color: purple;
+}
+
+@media (max-width: 576px) {
+    .container{
+        padding: 9em;
+    }
+}
